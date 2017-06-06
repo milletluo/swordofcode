@@ -36,19 +36,31 @@ CMyString::CMyString(const CMyString &str)
     strcpy(m_pData,str.m_pData);
 }
 
+//CMyString& CMyString::operator=(const CMyString &str)
+//{
+//    if(this == &str)
+//    {
+//        return *this;
+//    }
+//
+//    delete []m_pData;
+//    m_pData = NULL;
+//
+//    int length = strlen(str.m_pData);
+//    m_pData = new char[length + 1];
+//    strcpy(m_pData,str.m_pData);
+//    return *this;
+//}
+
 CMyString& CMyString::operator=(const CMyString &str)
 {
-    if(this == &str)
+    if(this != &str)
     {
-        return *this;
+        CMyString strTemp(str);
+        char* pTemp = strTemp.m_pData;
+        strTemp.m_pData = m_pData;
+        m_pData = pTemp;
     }
-
-    delete []m_pData;
-    m_pData = NULL;
-
-    int length = strlen(str.m_pData);
-    m_pData = new char[length + 1];
-    strcpy(m_pData,str.m_pData);
     return *this;
 }
 
