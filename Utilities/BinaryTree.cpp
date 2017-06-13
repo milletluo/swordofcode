@@ -8,8 +8,8 @@ https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
 *******************************************************************/
 
 //==================================================================
-// ¡¶½£Ö¸Offer¡ª¡ªÃûÆóÃæÊÔ¹Ù¾«½²µäÐÍ±à³ÌÌâ¡·´úÂë
-// ×÷Õß£ººÎº£ÌÎ
+// ï¿½ï¿½ï¿½ï¿½Ö¸Offerï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¹Ù¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í±ï¿½ï¿½ï¿½ï¿½â¡·ï¿½ï¿½ï¿½ï¿½
+// ï¿½ï¿½ï¿½ß£ï¿½ï¿½Îºï¿½ï¿½ï¿½
 //==================================================================
 
 #include <cstdio>
@@ -19,15 +19,15 @@ BinaryTreeNode* CreateBinaryTreeNode(int value)
 {
     BinaryTreeNode* pNode = new BinaryTreeNode();
     pNode->m_nValue = value;
-    pNode->m_pLeft = nullptr;
-    pNode->m_pRight = nullptr;
+    pNode->m_pLeft = NULL;
+    pNode->m_pRight = NULL;
 
     return pNode;
 }
 
 void ConnectTreeNodes(BinaryTreeNode* pParent, BinaryTreeNode* pLeft, BinaryTreeNode* pRight)
 {
-    if(pParent != nullptr)
+    if(pParent != NULL)
     {
         pParent->m_pLeft = pLeft;
         pParent->m_pRight = pRight;
@@ -36,23 +36,23 @@ void ConnectTreeNodes(BinaryTreeNode* pParent, BinaryTreeNode* pLeft, BinaryTree
 
 void PrintTreeNode(const BinaryTreeNode* pNode)
 {
-    if(pNode != nullptr)
+    if(pNode != NULL)
     {
         printf("value of this node is: %d\n", pNode->m_nValue);
 
-        if(pNode->m_pLeft != nullptr)
+        if(pNode->m_pLeft != NULL)
             printf("value of its left child is: %d.\n", pNode->m_pLeft->m_nValue);
         else
-            printf("left child is nullptr.\n");
+            printf("left child is NULL.\n");
 
-        if(pNode->m_pRight != nullptr)
+        if(pNode->m_pRight != NULL)
             printf("value of its right child is: %d.\n", pNode->m_pRight->m_nValue);
         else
-            printf("right child is nullptr.\n");
+            printf("right child is NULL.\n");
     }
     else
     {
-        printf("this node is nullptr.\n");
+        printf("this node is NULL.\n");
     }
 
     printf("\n");
@@ -62,25 +62,25 @@ void PrintTree(const BinaryTreeNode* pRoot)
 {
     PrintTreeNode(pRoot);
 
-    if(pRoot != nullptr)
+    if(pRoot != NULL)
     {
-        if(pRoot->m_pLeft != nullptr)
+        if(pRoot->m_pLeft != NULL)
             PrintTree(pRoot->m_pLeft);
 
-        if(pRoot->m_pRight != nullptr)
+        if(pRoot->m_pRight != NULL)
             PrintTree(pRoot->m_pRight);
     }
 }
 
 void DestroyTree(BinaryTreeNode* pRoot)
 {
-    if(pRoot != nullptr)
+    if(pRoot != NULL)
     {
         BinaryTreeNode* pLeft = pRoot->m_pLeft;
         BinaryTreeNode* pRight = pRoot->m_pRight;
 
         delete pRoot;
-        pRoot = nullptr;
+        pRoot = NULL;
 
         DestroyTree(pLeft);
         DestroyTree(pRight);

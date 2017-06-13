@@ -8,8 +8,8 @@ https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
 *******************************************************************/
 
 //==================================================================
-// ¡¶½£Ö¸Offer¡ª¡ªÃûÆóÃæÊÔ¹Ù¾«½²µäÐÍ±à³ÌÌâ¡·´úÂë
-// ×÷Õß£ººÎº£ÌÎ
+// ï¿½ï¿½ï¿½ï¿½Ö¸Offerï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¹Ù¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í±ï¿½ï¿½ï¿½ï¿½â¡·ï¿½ï¿½ï¿½ï¿½
+// ï¿½ï¿½ï¿½ß£ï¿½ï¿½Îºï¿½ï¿½ï¿½
 //==================================================================
 
 #include "Tree.h"
@@ -24,7 +24,7 @@ TreeNode* CreateTreeNode(int value)
 
 void ConnectTreeNodes(TreeNode* pParent, TreeNode* pChild)
 {
-    if(pParent != nullptr)
+    if(pParent != NULL)
     {
         pParent->m_vChildren.push_back(pChild);
     }
@@ -32,7 +32,7 @@ void ConnectTreeNodes(TreeNode* pParent, TreeNode* pChild)
 
 void PrintTreeNode(const TreeNode* pNode)
 {
-    if(pNode != nullptr)
+    if(pNode != NULL)
     {
         printf("value of this node is: %d.\n", pNode->m_nValue);
 
@@ -40,7 +40,7 @@ void PrintTreeNode(const TreeNode* pNode)
         std::vector<TreeNode*>::const_iterator i = pNode->m_vChildren.begin();
         while(i < pNode->m_vChildren.end())
         {
-            if(*i != nullptr)
+            if(*i != NULL)
                 printf("%d\t", (*i)->m_nValue);
         }
 
@@ -48,7 +48,7 @@ void PrintTreeNode(const TreeNode* pNode)
     }
     else
     {
-        printf("this node is nullptr.\n");
+        printf("this node is NULL.\n");
     }
 
     printf("\n");
@@ -58,7 +58,7 @@ void PrintTree(const TreeNode* pRoot)
 {
     PrintTreeNode(pRoot);
 
-    if(pRoot != nullptr)
+    if(pRoot != NULL)
     {
         std::vector<TreeNode*>::const_iterator i = pRoot->m_vChildren.begin();
         while(i < pRoot->m_vChildren.end())
@@ -71,7 +71,7 @@ void PrintTree(const TreeNode* pRoot)
 
 void DestroyTree(TreeNode* pRoot)
 {
-    if(pRoot != nullptr)
+    if(pRoot != NULL)
     {
         std::vector<TreeNode*>::iterator i = pRoot->m_vChildren.begin();
         while(i < pRoot->m_vChildren.end())
