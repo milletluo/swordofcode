@@ -1,4 +1,4 @@
-# swordofcode  剑指offer
+# swordofcode  [剑指offer](https://github.com/zhedahht/CodingInterviewChinese2)
 ## 01AssignmentOperator赋值运算符
 1. 返回值类型为该类型的引用，以允许连续赋值
 2. 传入的参数类型为常量引用，避免调用复制构造函数造成无谓消耗
@@ -165,3 +165,9 @@
 ## 42_2LeftRotateString左旋转字符串
 1. 先把字符串拆成两部分，分别翻转
 2. 合并字符串后翻转全部字符
+
+## 参考 
+
+[剑指offer-小胡](http://blog.csdn.net/hyp1977/article/category/6259575/4)
+
+[剑指Offer：名企面试官精讲典型编程题](http://zhedahht.blog.163.com/blog/#m=0)
