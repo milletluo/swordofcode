@@ -9,7 +9,7 @@ public:
         }
         int nLeft=0;
         int nRight=nLength-1;
-        while(nLeft!=nRight-1){//最后左指针指向前面子数组最大值，右指针指向后面子数组最小值
+        while(nLeft!=nRight-1){//最后左指针指向前面子数组最大值，右指针指向后面子数组最小值，两者相邻
             int nMid=(nLeft+nRight)>>1;
             if(rotateArray[nMid]<=rotateArray[nRight])
                 nRight=nMid;
